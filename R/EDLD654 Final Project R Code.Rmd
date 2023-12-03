@@ -1,0 +1,41 @@
+---
+title: "Final Project R Code"
+author: "Sam Lorenzo"
+date: "2023-11-27"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+tinytex::install_tinytex
+```
+
+```{r setup2, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(datasets)
+library(rio)
+library(readr)
+library(here)
+library(tidyr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(reticulate)
+library(recipes)
+library(janitor)
+library(finalfit)
+library(caret)
+library(cutpointr)
+```
+
+```{r data, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+
+covid19_tweets <- read_csv("/Users/samanthalorenzo/Desktop/Fall 2023/EDLD654 Machine Learning for Educational Data Science/EDLD654 Final Project/Data/covid19_tweets.csv")
+
+str(covid19_tweets)
+```
+

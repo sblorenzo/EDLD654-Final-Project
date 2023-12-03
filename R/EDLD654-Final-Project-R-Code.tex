@@ -1,0 +1,433 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Final Project R Code},
+  pdfauthor={Sam Lorenzo},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Final Project R Code}
+\author{Sam Lorenzo}
+\date{2023-11-27}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{tinytex}\SpecialCharTok{::}\NormalTok{install\_tinytex}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## function (force = FALSE, dir = "auto", version = "daily", bundle = "TinyTeX-1", 
+##     repository = "auto", extra_packages = if (is_tinytex()) tl_pkgs(), 
+##     add_path = TRUE) 
+## {
+##     if (tolower(Sys.getenv("TINYTEX_PREVENT_INSTALL")) == "true") 
+##         stop("The environment variable 'TINYTEX_PREVENT_INSTALL' was set to 'true', so ", 
+##             "the installation is aborted.")
+##     if (!is.logical(force)) 
+##         stop("The argument \"force\" must take a logical value.")
+##     p = which_bin(c("tlmgr", "pdftex", "xetex", "luatex"))
+##     p = p[p != ""]
+##     if (!force && length(p)) {
+##         message("Found '", p[1], "', which indicates a LaTeX distribution may have existed in the system.")
+##         if (interactive()) {
+##             if (tolower(substr(readline("Continue the installation anyway? (Y/N) "), 
+##                 1, 1)) != "y") 
+##                 return(invisible(""))
+##         }
+##         else stop("If you want to force installing TinyTeX anyway, use tinytex::install_tinytex(force = TRUE).")
+##     }
+##     force(extra_packages)
+##     check_dir = function(dir) {
+##         if (dir_exists(dir) && !force) 
+##             stop("The directory \"", dir, "\" exists. Please either delete it, ", 
+##                 "or use tinytex::install_tinytex(force = TRUE).")
+##     }
+##     if (missing(dir)) 
+##         dir = ""
+##     user_dir = ""
+##     if (dir != "") {
+##         dir = gsub("[/\\]+$", "", dir)
+##         check_dir(dir)
+##         unlink(dir, recursive = TRUE)
+##         user_dir = normalizePath(dir, mustWork = FALSE)
+##     }
+##     repository = normalize_repo(repository)
+##     not_ctan = repository != "ctan"
+##     https = grepl("^https://", repository)
+##     if (!grepl("TinyTeX", bundle)) 
+##         message("The bundle name '", bundle, "' has been automatically corrected to '", 
+##             bundle <- gsub("tinytex", "TinyTeX", bundle, ignore.case = TRUE), 
+##             "'.")
+##     owd = setwd(tempdir())
+##     on.exit(setwd(owd), add = TRUE)
+##     if ((texinput <- Sys.getenv("TEXINPUT")) != "") 
+##         message("Your environment variable TEXINPUT is \"", texinput, 
+##             "\". Normally you should not set this variable, because it may lead to issues like ", 
+##             "https://github.com/rstudio/tinytex/issues/92.")
+##     switch(os, unix = {
+##         check_local_bin()
+##         if (os_index != 3 && !any(dir_exists(c("~/bin", "~/.local/bin")))) on.exit(message("You may have to restart your system after installing TinyTeX to make sure ", 
+##             "~/bin appears in your PATH variable (https://github.com/rstudio/tinytex/issues/16)."), 
+##             add = TRUE)
+##     }, windows = {
+##     }, stop("Sorry, but tinytex::install_tinytex() does not support this platform: ", 
+##         os))
+##     src_install = getOption("tinytex.source.install", need_source_install())
+##     if (src_install && missing(extra_packages)) {
+##         extra_packages = switch(bundle, `TinyTeX-2` = "scheme-full", 
+##             TinyTeX = xfun::read_utf8("https://yihui.org/gh/tinytex/tools/pkgs-custom.txt"), 
+##             `TinyTeX-0` = {
+##                 warning("bundle = 'TinyTeX-0' is not supported for your system")
+##                 NULL
+##             })
+##     }
+##     install = function(...) {
+##         if (src_install) {
+##             install_tinytex_source(repository, ...)
+##         }
+##         else {
+##             install_prebuilt(bundle, ..., repo = repository)
+##         }
+##     }
+##     if (version == "daily") {
+##         version = ""
+##         determine_version = function() {
+##             if (xfun::url_accessible("https://yihui.org")) 
+##                 return("")
+##             if (xfun::url_accessible("https://github.com")) 
+##                 return("daily-github")
+##             warning("The daily version of TinyTeX does not appear to be accessible. ", 
+##                 "Switching to version = 'latest' instead. If you are sure to install ", 
+##                 "the daily version, call tinytex::install_tinytex(version = 'daily') ", 
+##                 "(which may fail).")
+##             "latest"
+##         }
+##         if (missing(version) && !src_install) 
+##             version = determine_version()
+##     }
+##     user_dir = install(user_dir, version, add_path, extra_packages)
+##     opts = options(tinytex.tlmgr.path = find_tlmgr(user_dir))
+##     on.exit(options(opts), add = TRUE)
+##     if (not_ctan) {
+##         if (os_index %in% c(1, 3) && https) {
+##             tlmgr(c("--repository", "http://www.preining.info/tlgpg/", 
+##                 "install", "tlgpg"))
+##         }
+##         tlmgr_repo(repository)
+##         if (tlmgr(c("update", "--list")) != 0) {
+##             warning("The repository ", repository, " does not seem to be accessible. Reverting to the default CTAN mirror.")
+##             tlmgr(c("option", "repository", "ctan"))
+##         }
+##     }
+##     invisible(user_dir)
+## }
+## <bytecode: 0x12d4e2ab8>
+## <environment: namespace:tinytex>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{TRUE}\NormalTok{)}
+
+\FunctionTok{library}\NormalTok{(datasets)}
+\FunctionTok{library}\NormalTok{(rio)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'rio' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readr)}
+\FunctionTok{library}\NormalTok{(here)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## here() starts at /Users/samanthalorenzo/Desktop/Fall 2023/EDLD654 Machine Learning for Educational Data Science/EDLD654 Final Project
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyr)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v dplyr     1.1.2     v purrr     1.0.1
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.4     v tibble    3.2.1
+## v lubridate 1.9.2
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(reticulate)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'reticulate'
+## 
+## The following object is masked from 'package:rio':
+## 
+##     import
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(recipes)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'recipes'
+## 
+## The following object is masked from 'package:stringr':
+## 
+##     fixed
+## 
+## The following object is masked from 'package:stats':
+## 
+##     step
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(janitor)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'janitor'
+## 
+## The following objects are masked from 'package:stats':
+## 
+##     chisq.test, fisher.test
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(finalfit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'finalfit' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(caret)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: lattice
+## 
+## Attaching package: 'caret'
+## 
+## The following object is masked from 'package:purrr':
+## 
+##     lift
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(cutpointr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'cutpointr'
+## 
+## The following objects are masked from 'package:caret':
+## 
+##     precision, recall, sensitivity, specificity
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{covid19\_tweets }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"/Users/samanthalorenzo/Desktop/Fall 2023/EDLD654 Machine Learning for Educational Data Science/EDLD654 Final Project/Data/covid19\_tweets.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 179108 Columns: 13
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (6): user_name, user_location, user_description, text, hashtags, source
+## dbl  (3): user_followers, user_friends, user_favourites
+## lgl  (2): user_verified, is_retweet
+## dttm (2): user_created, date
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(covid19\_tweets)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## spc_tbl_ [179,108 x 13] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ user_name       : chr [1:179108] "ᏉᎥ☻լꂅϮ" "Tom Basile 🇺🇸" "Time4fisticuffs" "ethel mertz" ...
+##  $ user_location   : chr [1:179108] "astroworld" "New York, NY" "Pewee Valley, KY" "Stuck in the Middle" ...
+##  $ user_description: chr [1:179108] "wednesday addams as a disney princess keepin it [̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅] 👸🏻💚♊️🧀🌵🌃🌙" "Husband, Father, Columnist & Commentator. Author of Tough Sell: Fighting the Media War in Iraq. Bush Admin Alum"| __truncated__ "#Christian #Catholic #Conservative #Reagan #Republican #Capitalist; Sports lover - #BBN #Cincinnati #Reds #Bengals #Trump2020" "#Browns #Indians #ClevelandProud #[]_[] #Cavs #Resist" ...
+##  $ user_created    : POSIXct[1:179108], format: "2017-05-26 05:46:42" "2009-04-16 20:06:23" ...
+##  $ user_followers  : num [1:179108] 624 2253 9275 197 101009 ...
+##  $ user_friends    : num [1:179108] 950 1677 9525 987 168 ...
+##  $ user_favourites : num [1:179108] 18775 24 7254 1488 101 ...
+##  $ user_verified   : logi [1:179108] FALSE TRUE FALSE FALSE FALSE FALSE ...
+##  $ date            : POSIXct[1:179108], format: "2020-07-25 12:27:21" "2020-07-25 12:27:17" ...
+##  $ text            : chr [1:179108] "If I smelled the scent of hand sanitizers today on someone in the past, I would think they were so intoxicated "| __truncated__ "Hey @Yankees @YankeesPR and @MLB - wouldn't it have made more sense to have the players pay their respects to t"| __truncated__ "@diane3443 @wdunlap @realDonaldTrump Trump never once claimed #COVID19 was a hoax. We all claim that this effor"| __truncated__ "@brookbanktv The one gift #COVID19 has give me is an appreciation for the simple things that were always around"| __truncated__ ...
+##  $ hashtags        : chr [1:179108] NA NA "['COVID19']" "['COVID19']" ...
+##  $ source          : chr [1:179108] "Twitter for iPhone" "Twitter for Android" "Twitter for Android" "Twitter for iPhone" ...
+##  $ is_retweet      : logi [1:179108] FALSE FALSE FALSE FALSE FALSE FALSE ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   user_name = col_character(),
+##   ..   user_location = col_character(),
+##   ..   user_description = col_character(),
+##   ..   user_created = col_datetime(format = ""),
+##   ..   user_followers = col_double(),
+##   ..   user_friends = col_double(),
+##   ..   user_favourites = col_double(),
+##   ..   user_verified = col_logical(),
+##   ..   date = col_datetime(format = ""),
+##   ..   text = col_character(),
+##   ..   hashtags = col_character(),
+##   ..   source = col_character(),
+##   ..   is_retweet = col_logical()
+##   .. )
+##  - attr(*, "problems")=<externalptr>
+\end{verbatim}
+
+\end{document}

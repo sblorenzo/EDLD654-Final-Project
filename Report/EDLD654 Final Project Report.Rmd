@@ -1,0 +1,108 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center">**Title**
+<div align="center">Samantha Lorenzo
+<div align="center">EDLD654 Machine Learning for Educational Data Science
+<div align="center">Final Project Report
+<div align="center">December 6, 2023
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r packages, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(datasets)
+library(rio)
+library(readr)
+library(here)
+library(tidyr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(reticulate)
+library(recipes)
+library(janitor)
+library(finalfit)
+library(caret)
+library(cutpointr)
+```
+
+<div align="left">**Reproducibility Note:** Please use this [link](https://github.com/sblorenzo/EDLD654-Final-Project.git) to view the GitHub repo. All codes used for this report can be found in the **EDLD654 Final Project Code** R Markdown file located within the **R** folder. 
+
+
+**Research Problem**
+<div align="left">The effects of the COVID-19 pandemic have been (and continue to be) felt across the world, dramatically altering societal norms and interactions. Due to the immediate devastation and residual impacts prompted by the virus, the World Health Organization (WHO) and other governmental institutes around the globe responded by recommending (and in many cases, enforcing) the practice of social distancing through stay-at-home orders (Matias et al., 2020). While this tactic aimed to slow the spread of COVID-19, it also resulted in mass isolation, increasing people’s vulnerability by restricting access to basic human needs (i.e., healthcare, resources, and social connections; Matias et al., 2020). The pandemic also amplified digital media use, allowing for social applications such as Twitter to garner rapid popularity (Bellan, 2020).
+
+**Description of Data**
+
+
+```{r data, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+covid19_tweets <- read_csv("/Users/samanthalorenzo/Desktop/Fall 2023/EDLD654 Machine Learning for Educational Data Science/EDLD654 Final Project/Data/covid19_tweets.csv")
+
+str(covid19_tweets)
+```
+
+**Description of the Models**
+
+
+**Data Visualization**
+
+
+*Model 1:*
+
+
+*Model 2:*
+
+
+*Model 3:*
+
+
+**Model Fit**
+
+
+**Discussion/Conclusion**
+
+
+<div align="center">**References**
+
+<div align="left">Bellan, R. (2020). The Top Social Media Apps of 2020, According to Apptopia. *Forbes*.
+<div align="left">Matias, T., Dominski, F. H., & Marks, D. F. (2020). Human needs in COVID-19 isolation.
+*Journal of health psychology*, 25(7), 871-882.
+<div align="left">Preda, G. (2020). *COVID19 Tweets* [Data set].Kaggle.
+  https://www.kaggle.com/datasets/gpreda/covid19-tweets/data?select=covid19_tweets.csv.
